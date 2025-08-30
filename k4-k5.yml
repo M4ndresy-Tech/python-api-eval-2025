@@ -1,37 +1,5 @@
-openapi: 3.0.3
-info:
-  title: k4-k5 API
-  version: 1.0.0
-paths: 
-  /hello:
-    get:
-      summary: Retourne un message Hello world!
-      responses:
-        '200':
-          description: Message texte simple
-          content:
-            text/plain:
-              schema:
-                type: string
-  /welcome:
-    get:
-      summary: Retourne un message de bienvenue avec le nom fourni
-      parameters:
-        - name: name
-          in: query
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Message de bienvenue
-          content:
-            text/plain:
-              schema:
-                type: string
-  /students:
-    post:
-      summary: Crée de nouveaux étudiants
+    put:
+      summary: Crée ou met à jour des étudiants
       requestBody:
         required: true
         content:
@@ -51,27 +19,7 @@ paths:
                     type: integer
       responses:
         '201':
-          description: Étudiants créés avec succès
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    reference:
-                      type: string
-                    first_name:
-                      type: string
-                    last_name:
-                      type: string
-                    age:
-                      type: integer
-    get:
-      summary: Récupère tous les étudiants
-      responses:
-        '200':
-          description: Liste des étudiants
+          description: Étudiants créés ou mis à jour
           content:
             application/json:
               schema:
