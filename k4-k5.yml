@@ -1,1 +1,15 @@
-=
+openapi: 3.0.3
+info:
+  title: k4-k5 API
+  version: 1.0.0
+paths: 
+  /hello:
+    get:
+      summary: Retourne un message Hello world!
+      responses:
+        '200':
+          description: Message texte simple
+          content:
+            text/plain:
+              schema:
+                type: string
