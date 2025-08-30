@@ -13,3 +13,19 @@ paths:
             text/plain:
               schema:
                 type: string
+  /welcome:
+    get:
+      summary: Retourne un message de bienvenue avec le nom fourni
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Message de bienvenue
+          content:
+            text/plain:
+              schema:
+                type: string
