@@ -67,3 +67,23 @@ paths:
                       type: string
                     age:
                       type: integer
+    get:
+      summary: Récupère tous les étudiants
+      responses:
+        '200':
+          description: Liste des étudiants
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    reference:
+                      type: string
+                    first_name:
+                      type: string
+                    last_name:
+                      type: string
+                    age:
+                      type: integer
