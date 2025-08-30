@@ -118,4 +118,29 @@ paths:
                       type: string
                     creation_datetime:
                       type: string
+  /ping/auth:
+    get:
+      summary: Vérifie l’authentification avec header Authorization
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Authentification réussie, retourne pong
+          content:
+            text/plain:
+              schema:
+                type: string
+        '401':
+          description: Authentification invalide
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  detail:
+                    type: string
 
