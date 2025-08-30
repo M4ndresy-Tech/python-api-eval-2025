@@ -143,4 +143,20 @@ paths:
                 properties:
                   detail:
                     type: string
+  /{full_path}:
+    get:
+      summary: Route par défaut pour toutes les autres URLs
+      parameters:
+        - name: full_path
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '404':
+          description: Page non trouvée
+          content:
+            text/html:
+              schema:
+                type: string
 
