@@ -81,3 +81,41 @@ paths:
                       type: string
                     creation_datetime:
                       type: string
+    put:
+      summary: Crée ou met à jour des posts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  author:
+                    type: string
+                  title:
+                    type: string
+                  content:
+                    type: string
+                  creation_datetime:
+                    type: string
+      responses:
+        '201':
+          description: Posts créés ou mis à jour
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    author:
+                      type: string
+                    title:
+                      type: string
+                    content:
+                      type: string
+                    creation_datetime:
+                      type: string
+
