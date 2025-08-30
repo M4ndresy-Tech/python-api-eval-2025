@@ -3,3 +3,14 @@ info:
   title: k1-k2-k3 API
   version: 1.0.0
 paths: {}
+paths:
+  /ping:
+    get:
+      summary: Vérifie que le serveur est actif
+      responses:
+        '200':
+          description: Pong
+          content:
+            text/plain:
+              schema:
+                type: string
