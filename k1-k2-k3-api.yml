@@ -13,3 +13,13 @@ paths:
             text/plain:
               schema:
                 type: string
+    /home:
+    get:
+      summary: Page d'accueil HTML
+      responses:
+        '200':
+          description: Page HTML d'accueil
+          content:
+            text/html:
+              schema:
+                type: string
