@@ -23,3 +23,41 @@ paths:
             text/html:
               schema:
                 type: string
+  /posts:
+    post:
+      summary: Crée de nouveaux posts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  author:
+                    type: string
+                  title:
+                    type: string
+                  content:
+                    type: string
+                  creation_datetime:
+                    type: string
+      responses:
+        '201':
+          description: Posts créés avec succès
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    author:
+                      type: string
+                    title:
+                      type: string
+                    content:
+                      type: string
+                    creation_datetime:
+                      type: string
